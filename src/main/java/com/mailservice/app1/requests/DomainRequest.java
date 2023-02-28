@@ -9,6 +9,11 @@ public class DomainRequest {
     String ip;
     @Id
     private long id;
+    //List users
+    public DomainRequest(String name,String ip){
+        this.name = name;
+        this.ip = ip;
+    }
 
     public long getId() {
         return id;
@@ -28,5 +33,14 @@ public class DomainRequest {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "DomainRequest{" +
+                "name='" + name + '\'' +
+                ", ip='" + ip + '\'' +
+                ", id=" + id +
+                '}';
     }
 }
